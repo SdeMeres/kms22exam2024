@@ -1,0 +1,241 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+
+  /* -- variables start -- */
+
+  --font-size: 1rem;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --black: 1, 8, 13;
+  --white: 250, 250, 250;
+
+  /* sshooting lords colors */
+
+  --lords-purple: 40, 2, 46;
+
+  --lords-beige: 231, 226, 215;
+
+  --lords-green: 44, 73, 54;
+
+  --lords-silver: 228, 232, 241;
+
+  /* shooting lords colors derivates */
+
+  --lords-purple-lighten: 138, 113, 120;
+
+  /* default status colors */
+  /*   --ordered-darker: var(--restolution-orange);
+  --ordered-lighter: var(--restolution-orange-light);
+
+  --ready-darker: var(--restolution-green);
+  --ready-lighter: var(--restolution-green-light);
+
+  --served-darker: var(--restolution-blue);
+  --served-lighter: var(--restolution-blue-light);
+
+  --toast-text-color: var(--restolution-dark-blue);
+  --toast-info-accent-color: var(--gray-300); */
+  /* -- variables end -- */
+}
+
+/* -- FONT FACES -- */
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("/public/fonts/CinzelDecorative-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/public/fonts/SpaceGrotesk-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/public/fonts/SpaceGrotesk-Bold.ttf");
+  font-weight: 700;
+}
+
+/* -- MAIN -- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font-size: 1rem;
+  place-items: center;
+  height: 100%;
+  margin: 0;
+  background-color: rgb(var(--lords-beige));
+}
+
+.wrapper {
+  /* -- variables start -- */
+
+  --primary: var(--lords-purple);
+  --primary-contrast: var(--lords-green);
+
+  --accent: var(--lords-silver);
+  --accent-light: var(--white);
+
+  /*   --scrollbar-track: 231, 233, 239;
+  --scrollbar-thumb: 211, 213, 219;
+
+  --box-shadow-color: var(--restolution-dark-blue);
+
+  --black-text: var(--black);
+
+  --ordered: var(--ordered-darker);
+  --ordered-accent: var(--ordered-lighter);
+
+  --ready: var(--ready-darker);
+  --ready-accent: var(--ready-lighter);
+
+  --served: var(--served-darker);
+  --served-accent: var(--served-lighter);
+
+  --changed: var(--restolution-yellow);
+  --deleted: var(--red);
+  --deleted-accent: var(--red); */
+  /* -- variables end -- */
+}
+
+@media (max-width: 900px) {
+  body {
+    /* -- variables start -- */
+    --font-size: 0.875rem;
+    /* -- variables end -- */
+  }
+}
+
+/* -- ELEMENTS -- */
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid transparent;
+  font-family: "Space Grotesk";
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: rgb(var(--lords-green));
+  box-shadow: none;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+
+  &:hover {
+    border-color: rgb(var(--accent));
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 2000px rgba(1, 8, 13, 0.4); /* Change to desired color on click */
+  }
+}
+
+/* button.icon-only {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.25rem;
+} */
+
+/* .card {
+  padding: 2rem;
+} */
+
+h1 {
+  font-size: 6rem;
+}
+
+/* svg path {
+  transition: fill 0.25s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+/* .popover {
+  position: fixed;
+  bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 95vh;
+  padding: 0;
+  background-color: rgba(var(--sidebar-bg), 0.97);
+  border-radius: 1rem 1rem 0.125rem 1rem;
+  box-shadow: 0px 1px 24px rgba(var(--restolution-dark-blue), 25%);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  opacity: 0;
+  animation: fade 0.18s forwards;
+} */
+
+/* .modal,
+.popover {
+  ::-webkit-scrollbar {
+    width: 2rem;
+    background-color: rgba(255, 255, 255, 0);
+    height: 90%;
+  }
+}
+ */
+/* -- UTILITIES -- */
+
+/* .flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.text-danger {
+  color: rgb(var(--red));
+} */
+
+/* -- SCROLLBAR -- */
+
+/* ::-webkit-scrollbar {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0);
+  height: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(var(--scrollbar-track));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--scrollbar-thumb));
+  border-radius: 1.25rem;
+  border: 0.375rem solid rgb(var(--scrollbar-track));
+} */
