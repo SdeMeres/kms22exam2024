@@ -30,5 +30,3 @@ Käivitage development server
 
 npm run dev
 See käsk kompileerib Vue.js rakenduse ja käivitab serveri. Kui server on käivitunud, saate rakendusele veebibrauseris ligi aadressil http://localhost:8080.
-
-Translated with DeepL.com (free version)
